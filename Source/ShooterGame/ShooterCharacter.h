@@ -23,6 +23,8 @@ protected:
 	void LookUpAtRate(float Rate);
 	void TurnAtRate(float Rate);
 
+	bool GetBeamEndLocation(const FVector& MuzzleSocketLocation, FVector& OutBeamLocation);
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -40,6 +42,26 @@ private:
 	float BaseTurnRate;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera", meta = (AllowPrivateAccess = "true"))
 	float BaseLookUpRate;
+
+	//fires the weapon
+	void FireWeapon();
+
+	//randomized gunshot sound
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combat",meta=(AllowPrivateAccess=true))
+	class USoundCue* FireSound;
+	//muzzle flash particle
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = true))
+	class UParticleSystem* MuzzleFlash;
+	//plays fire montage
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = true))
+	class UAnimMontage* HipFireMontage;
+	//Bullet impact particle
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = true))
+	UParticleSystem* ImpactParticles;
+	//Smoke Trails for bullets
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = true))
+	UParticleSystem* BeamParticles;
+
 
 public:
 
