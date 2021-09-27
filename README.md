@@ -11,12 +11,12 @@ This is the repo for a Third Person Shooter game I have been developing to pract
 * Sound (footprints,weapon shot)
 
 
-# Assets I have been using
+## Assets I have been using
 * [Character from Unreal Marketplace](https://www.unrealengine.com/marketplace/en-US/product/paragon-lt-belica)
 * [Weapon](https://www.unrealengine.com/marketplace/en-US/item/89d86599a98045c5806d6fccd7c7071a)
 * [Effect](https://www.unrealengine.com/marketplace/en-US/item/38a3355872ef41bab5d2ba5b21c29eba)
 
-# Things I have added till now
+## Things I have added till now
 * Basic Character Movement //No jump functionality implemented yet -_-
 * Strafing
 * Temporary Line Trace based weapon
