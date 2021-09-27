@@ -21,3 +21,5 @@ This is the repo for a Third Person Shooter game I have been developing to pract
 * Strafing
 * Temporary Line Trace based weapon
 
+
+![locomotionbasic](https://user-images.githubusercontent.com/66364348/134957345-1eab8ac8-617a-4ccb-b112-e4694f7ef324.gif)
