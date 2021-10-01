@@ -22,8 +22,29 @@ protected:
 	void MoveRight(float Value);
 	void LookUpAtRate(float Rate);
 	void TurnAtRate(float Rate);
+	/*Updating look rates while rotating using mouse*/
+	void Turn(float Value);
+	void LookUp(float Value);
 
 	bool GetBeamEndLocation(const FVector& MuzzleSocketLocation, FVector& OutBeamLocation);
+
+	void AimingButtonPressed();
+	void AimingButtonReleased();
+	void CameraInterpZoom(float DeltaTime);
+	void SetLookRates();
+	
+	void CalculateCrosshairSpread(float DeltaTime);
+
+	void StartCrosshairBulletFire();
+	UFUNCTION()
+	void FinishCrosshairBulletFire();
+
+	void FireButtonPressed();
+	void FireButtonReleased();
+
+	void StartFireTimer();
+	UFUNCTION()
+	void AutoFireReset();
 
 public:	
 	// Called every frame
@@ -62,9 +83,73 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = true))
 	UParticleSystem* BeamParticles;
 
+	/** Aiming*/
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Combat", meta = (AllowPrivateAccess = true))
+	bool bAiming;
+	/** Camera Default Field Of View*/
+	float CameraDefaultFOV;
+	/** Camera Field Of View While Aiming*/
+	float CameraZoomedFOV;
 
+	/*Camera Current FOV*/
+	float CameraCurrentFOV;
+	/*Interp speed for zooming*/
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = true))
+	float ZoomInterpSpeed;
+
+	/*Look up rate when not aiming*/
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = true))
+	float HipLookUpRate;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = true), meta = (ClampMin = "0.0", ClampMax = "1.0", UIMin = "0.0", UIMax = "1.0"))
+	float MouseHipLookUpRate;
+
+	/*Turn rate when not aiming*/
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = true))
+	float HipTurnRate;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = true), meta = (ClampMin = "0.0", ClampMax = "1.0", UIMin = "0.0", UIMax = "1.0"))
+	float MouseHipTurnRate;
+
+	/*Look up rate when aiming*/
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = true))
+	float AimingLookUpRate;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = true),meta=(ClampMin="0.0",ClampMax="1.0",UIMin="0.0",UIMax="1.0"))
+	float MouseAimingLookUpRate;
+
+	/*Turn rate when aiming*/
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = true))
+	float  AimingTurnRate;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Combat", meta = (AllowPrivateAccess = true),meta = (ClampMin = "0.0", ClampMax = "1.0", UIMin = "0.0", UIMax = "1.0"))
+	float  MouseAimingTurnRate;
+
+	/*Crosshairs*/
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Crosshairs", meta=(AllowPrivateAccess = true))
+	float CrosshairSpreadMultiplier;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Crosshairs", meta=(AllowPrivateAccess = true))
+	float CrosshairVelocityFactor;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Crosshairs", meta=(AllowPrivateAccess = true))
+	float CrosshairInAirFactor;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Crosshairs", meta=(AllowPrivateAccess = true))
+	float CrosshairAimFactor;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Crosshairs", meta=(AllowPrivateAccess = true))
+	float CrosshairShootingFactor;
+
+	float ShootTimeDuration;
+	bool bFiringBullet;
+	FTimerHandle CrosshairShootTimer;
+
+	/* left mouse button pressed?*/
+	bool bFireButtonPressed;
+	/* if true , we can fire . False when waiting for the timer*/
+	bool bShouldFire;
+	/*Fire rate of automatic weapon*/
+	float AutomaticFireRate;
+	/*sets a timer between gunshots*/
+	FTimerHandle AutoFireTimer;
 public:
 
 	FORCEINLINE USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	FORCEINLINE UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+	FORCEINLINE bool GetAiming() const { return bAiming; }
+	UFUNCTION(BlueprintCallable)
+	float GetCrosshairSpreadMultiplier() const;
 };
