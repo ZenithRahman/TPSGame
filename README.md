@@ -17,13 +17,13 @@ This is the repo for a Third Person Shooter game I have been developing to pract
 * [Effect](https://www.unrealengine.com/marketplace/en-US/item/38a3355872ef41bab5d2ba5b21c29eba)
 
 ## Things I have added till now
-* Basic Character Movement with strafing aka 9 way movement
+* Basic Character Movement with strafing aka 9 way movement (needs some tweaking!)\
 ![Loco](https://templatehobe.com/wp-content/uploads/2021/10/locomotion.gif)
-* Jump functionality addded
+* Jump functionality added\
 ![jump](https://templatehobe.com/wp-content/uploads/2021/10/jumping.gif)
-* Dynamic crosshair (reacts to player velocity,jumping,shooting,aiming factors)
+* Dynamic crosshair (reacts to player velocity,jumping,shooting,aiming factors)\
 ![Crosshair](https://templatehobe.com/wp-content/uploads/2021/10/crosshair.gif)
-* Aiming with right mouse button
+* Aiming with right mouse button\
 ![aiming](https://templatehobe.com/wp-content/uploads/2021/10/aiming.gif)
-* Temporary Line Trace based weapon(Added automatic fire)
+* Temporary Line Trace based weapon(Added automatic fire)\
 ![shoot](https://templatehobe.com/wp-content/uploads/2021/10/shooting.gif)
