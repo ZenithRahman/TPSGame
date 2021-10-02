@@ -18,12 +18,12 @@ This is the repo for a Third Person Shooter game I have been developing to pract
 
 ## Things I have added till now
 * Basic Character Movement with strafing aka 9 way movement
-![Loco](https://im2.ezgif.com/tmp/ezgif-2-6db7ac5db0b7.gif)
+![Loco](https://templatehobe.com/wp-content/uploads/2021/10/locomotion.gif)
 * Jump functionality addded
-![jump](https://im2.ezgif.com/tmp/ezgif-2-557e9a88281e.gif)
+![jump](https://templatehobe.com/wp-content/uploads/2021/10/jumping.gif)
 * Dynamic crosshair (reacts to player velocity,jumping,shooting,aiming factors)
-![Crosshair](https://im2.ezgif.com/tmp/ezgif-2-3e32f6900aeb.gif)
+![Crosshair](https://templatehobe.com/wp-content/uploads/2021/10/crosshair.gif)
 * Aiming with right mouse button
-![locomotion](https://im2.ezgif.com/tmp/ezgif-2-19bf49f5f24a.gif)
+![aiming](https://templatehobe.com/wp-content/uploads/2021/10/aiming.gif)
 * Temporary Line Trace based weapon(Added automatic fire)
-![shoot](https://im2.ezgif.com/tmp/ezgif-2-f40210ae0edb.gif)
+![shoot](https://templatehobe.com/wp-content/uploads/2021/10/shooting.gif)
