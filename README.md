@@ -1,4 +1,4 @@
-# Third Person Shooter
+## Third Person Shooter
 This is the repo for a Third Person Shooter game I have been developing to practice my skills.
 ## Things I will try to implement
 
@@ -14,16 +14,16 @@ This is the repo for a Third Person Shooter game I have been developing to pract
 ## Assets I have been using
 * [Character from Unreal Marketplace](https://www.unrealengine.com/marketplace/en-US/product/paragon-lt-belica)
 * [Weapon](https://www.unrealengine.com/marketplace/en-US/item/89d86599a98045c5806d6fccd7c7071a)
-* [Effect](https://www.unrealengine.com/marketplace/en-US/item/38a3355872ef41bab5d2ba5b21c29eba)
+* [VFX Pack](https://www.unrealengine.com/marketplace/en-US/item/38a3355872ef41bab5d2ba5b21c29eba)
 
 ## Things I have added till now
 * Basic Character Movement with strafing aka 9 way movement (needs some tweaking!)\
-![Loco](https://templatehobe.com/wp-content/uploads/2021/10/locomotion.gif)
-* Jump functionality added\
-![jump](https://templatehobe.com/wp-content/uploads/2021/10/jumping.gif)
 * Dynamic crosshair (reacts to player velocity,jumping,shooting,aiming factors)\
-![Crosshair](https://templatehobe.com/wp-content/uploads/2021/10/crosshair.gif)
+![ezgif com-optimize (1)](https://github.com/ZenithRahman/TPSGame/assets/66364348/f85c3ff9-83b5-4b48-a7af-a13a56d8c32b)
+* Jump functionality added\
+![ezgif com-optimize (2)](https://github.com/ZenithRahman/TPSGame/assets/66364348/1066db5b-59e1-480c-b498-168d0816cc76)
 * Aiming with right mouse button\
-![aiming](https://templatehobe.com/wp-content/uploads/2021/10/aiming.gif)
+![ezgif com-optimize (3)](https://github.com/ZenithRahman/TPSGame/assets/66364348/ec4a059e-f10f-4d64-9d6f-ca7d9c312aad)
 * Temporary Line Trace based weapon(Added automatic fire)\
-![shoot](https://templatehobe.com/wp-content/uploads/2021/10/shooting.gif)
+![ezgif com-optimize (4)](https://github.com/ZenithRahman/TPSGame/assets/66364348/afa20cca-df68-414c-8095-de7001bed12b)
+
